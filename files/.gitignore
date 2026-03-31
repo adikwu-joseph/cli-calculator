@@ -1,0 +1,16 @@
+# Compiled output
+calculator
+*.exe
+*.out
+*.o
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# CMake
+CMakeFiles/
+cmake_install.cmake
+CMakeLists.txt.user
