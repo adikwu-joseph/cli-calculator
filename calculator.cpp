@@ -3,11 +3,13 @@
 
 using namespace std;
 
+// Clears cin error state and discards invalid input to avoid infinite loops
 void clearInput() {
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
 
+// Validates supported operators
 bool isValidOperator(char operation) {
     return operation == '+' || operation == '-' || operation == '*' || operation == '/';
 }
@@ -49,7 +51,6 @@ int main() {
             clearInput();
         }
 
-        // Perform calculation
         switch (operation) {
             case '+':
                 result = add(num1, num2);
@@ -61,6 +62,7 @@ int main() {
                 result = multiply(num1, num2);
                 break;
             case '/':
+                // Guard against division by zero
                 if (num2 == 0) {
                     cout << "\nError: Division by zero is not allowed.\n\n";
                     continue;
