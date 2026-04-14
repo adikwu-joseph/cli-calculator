@@ -1,3 +1,5 @@
 .DS_Store
+*.dSYM/
+files/
 calculator
-calculator.dSYM/
+
